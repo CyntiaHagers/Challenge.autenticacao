@@ -1,0 +1,298 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Ou 'Arial', 'Segoe UI' */
+    background-color: #f0f2f5; /* Fundo cinza claro da página */
+    display: flex; /* Para o layout flexível */
+    min-height: 100vh; /* Ocupa a altura total da viewport */
+}
+
+
+.page-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar Esquerda */
+.left-sidebar {
+    width: 280px; /* Largura fixa da sidebar */
+    background: linear-gradient(to bottom, #2EC2FF 8%, #3C7AC7 35%, #4359AD 55%, #483E98 77%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui o conteúdo verticalmente */
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    flex-shrink: 0; /* Impede que a sidebar encolha */
+    box-sizing: border-box; /* Inclui padding na largura */
+}
+
+.sidebar-content {
+    width: 100%;
+}
+
+.recording-status h3, .progress-section h3 {
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+.recording-status p {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+.audio-waveform {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.audio-waveform .time {
+    position: absolute;
+    left: 10px;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.8em;
+}
+.audio-waveform .bar {
+    width: 3px;
+    height: 15px;
+    background-color: #ffc107; /* Amarelo */
+    margin: 0 1px;
+    display: inline-block;
+    animation: waveform-animation 1s infinite alternate;
+}
+
+/* Animação para simular onda sonora */
+@keyframes waveform-animation {
+    0% { height: 15px; }
+    50% { height: 25px; }
+    100% { height: 15px; }
+}
+/* Ajuste para as barras para parecerem mais variadas */
+.audio-waveform .bar:nth-child(odd) { animation-delay: -0.2s; }
+.audio-waveform .bar:nth-child(even) { animation-delay: -0.4s; }
+
+
+.video-preview {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    background-color: black;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.video-preview video { /* Alvo: o elemento <video> dentro de .video-preview */
+    position: absolute; /* Posição absoluta para preencher o contêiner pai */
+    top: 0;
+    left: 0;
+    width: 100%; /* Preenche 100% da largura do contêiner */
+    height: 100%; /* Preenche 100% da altura do contêiner */
+    object-fit: cover; /* ESSENCIAL: Faz o vídeo cobrir todo o espaço, cortando as bordas se necessário */
+    object-position: center; /* ESSENCIAL: Centraliza o vídeo dentro do contêiner, mesmo que haja corte */
+}
+
+.camera-icon {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    /* Simular ícone de câmera com texto ou um SVG */
+}
+.camera-icon::before {
+    content: "📷"; /* Emoji de câmera, ou use um ícone SVG */
+    margin-right: 4px;
+}
+
+
+.progress-bar-container {
+    width: 100%;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 5px;
+    height: 15px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(to right, #FFD700, #FFA500); /* Gradiente amarelo/laranja */
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+.progress-bar-container span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.lets-sign-footer {
+    margin-top: auto; /* Empurra para o final da sidebar */
+    width: 100%;
+    text-align: left;
+}
+.lets-sign-footer img {
+    width: 120px; /* Ajuste o tamanho do logo */
+    margin-bottom: 5px;
+}
+.contact-support {
+    font-size: 0.8em;
+    margin: 0;
+}
+.contact-support a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    flex-grow: 1; /* Ocupa o restante do espaço */
+    background-color: #f9f9f9; /* Fundo cinza claro para a área de conteúdo */
+    padding: 20px; /* Padding geral da área de conteúdo */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o documento horizontalmente */
+    position: relative; /* Para posicionar o cabeçalho absoluto */
+    overflow-y: auto; /* Adiciona scroll se o conteúdo for maior que a tela */
+}
+
+/* Cabeçalho da área de conteúdo principal */
+.main-content-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    position: absolute; /* Posição absoluta no topo do main-content */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Garante que fique acima do documento */
+}
+
+.main-content-header .header-logo img {
+    width: 100px; /* Ajuste o tamanho do logo builtcode */
+
+}
+.secure-environment-text {
+    font-size: 0.9em;
+    color: #888;
+    display: flex;
+    align-items: center;
+}
+
+.secure-environment-text .padlock-icon {
+    margin-left: 5px;
+    font-size: 1.1em; /* Ajusta tamanho do cadeado */
+}
+
+.secure-environment-text .green-circle {
+    width: 8px;
+    height: 8px;
+    background-color: #4CAF50; /* Verde */
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+/* Contêiner do Documento (centraliza e adiciona padding) */
+.document-container {
+    flex-grow: 1; /* Permite que o contêiner do documento ocupe o espaço vertical */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha o documento ao topo verticalmente */
+    width: 100%;
+    padding-top: 60px; /* Espaço para o cabeçalho absoluto */
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilo da "Página de Documento" */
+.document-page {
+    background-color: white;
+    padding: 50px 60px; /* Simula as margens do documento (top/bottom, left/right) */
+    width: 794px; /* Largura típica de uma página A4 em pixels (210mm) a 96dpi. Ajuste conforme necessário. */
+    min-height: 1122px; /* Altura típica de uma página A4 em pixels (297mm) a 96dpi. Use min-height para páginas menores */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+    font-family: 'Roboto', sans-serif; /* Ou 'Times New Roman', 'Arial', 'Calibri' */
+    color: #333; /* Cor do texto principal */
+    box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura/altura */
+}
+
+.document-title {
+    text-align: center;
+    font-size: 3.5em; /* Tamanho grande para o título "challenge" */
+    color: #FF7F00; /* Cor laranja */
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase; /* Se o título for todo em maiúsculas */
+}
+
+.document-heading {
+    font-size: 1.5em; /* Tamanho para o subtítulo */
+    margin-bottom: 30px;
+    text-align: left;
+    color: #333;
+    font-weight: 600; /* Semi-bold */
+}
+
+.document-paragraph {
+    margin-bottom: 20px;
+    text-align: justify; /* Alinha o texto nas duas bordas */
+    font-size: 1em;
+}
+
+.document-list {
+    list-style-position: outside; /* Os números/marcadores ficam fora do bloco de texto */
+    padding-left: 30px; /* Indenta a lista */
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.document-list li {
+    margin-bottom: 10px;
+}
+
+/* No seu arquivo tela7_styles.css */
+
+.recording-status {
+    /* Seus estilos existentes para recording-status */
+    /* ... */
+    margin-bottom: 150px; /* Adicione ou aumente este valor para mais espaço */
+}
+
+.signature-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.signature-button {
+    background-color: #2EC2FF;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signature-button:hover {
+    background-color: #483E98;
+}

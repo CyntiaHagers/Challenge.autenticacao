@@ -1,0 +1,169 @@
+/* Estilo geral */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+}
+
+/* Barra superior */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d9d9d9 0.9;
+  padding: 10px 20px;
+}
+
+.header .logo img {
+  width: 120px;
+}
+
+.header .header-text p {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 300px;
+  background: #453a90;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar a {
+  color: #a0d8ff;
+  text-decoration: none;
+}
+
+.sidebar p, .content p {
+  margin: 2px 0;  /* Adicionando um pequeno espaço entre os <p> */
+}
+
+
+.sidebar h4 {
+  margin: 20px 0 5px;
+}
+
+.check-icon {
+  width: 24px;
+  margin-bottom: 10px;
+}
+
+.assinatura,
+.email {
+  margin: 0;
+  font-size: 14px;
+}
+
+.content {
+  flex: 1;
+  background: white;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.check-status img {
+  width: 150
+  px;
+  margin-bottom: 20px;
+}
+
+.check-status h2 {
+  color: #333;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.check-status p {
+  color: #666;
+}
+
+/* Newsletter com layout flexível */
+.newsletter {
+  margin-top: 60px;
+  background: linear-gradient(to bottom, #2EC2FF 8%, #3C7AC7 35%, #4359AD 55%, #483E98 77%);
+  color: white;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+/* Texto da newsletter */
+.newsletter .text h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.newsletter .text p {
+  font-size: 14px;
+}
+
+.newsletter button {
+  margin-top: 10px;
+  background: #2EC2FF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Container de imagens */
+.images-container {
+  position: relative;
+
+}
+
+.notebook-container {
+  position: relative;
+  width: 220px; /* largura da imagem do notebook */
+
+}
+
+.notebook-img {
+  width: 100%;
+  display: block;
+  mix-blend-mode: multiply;
+
+}
+
+.screen-img {
+  position: absolute;
+  top: 28px;    /* ajuste conforme necessário */
+  left: 28px;   /* ajuste conforme necessário */
+  width: 165px; /* ajuste conforme necessário */
+  height: 95px; /* ajuste conforme necessário */
+  border-radius: 4px;
+  object-fit: cover;
+}
+/* Ajuste do logo-footer para garantir boa visibilidade */
+.sidebar .logo-footer {
+  background-color: transparent; /* Cor de fundo clara */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Ajuste da cor do texto e do logo */
+.sidebar .logo-footer img {
+  filter: none; /* Remove qualquer filtro que possa escurecer a imagem */
+}
+
+.sidebar .logo-footer p {
+  color: #333;  /* Ajusta a cor do texto, se necessário */
+}

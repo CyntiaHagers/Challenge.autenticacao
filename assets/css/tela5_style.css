@@ -1,0 +1,121 @@
+/* Estilos gerais */
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	font-family: 'Segoe UI', sans-serif;
+	background-color: #fff;
+	overflow: hidden; /* Prevent scrolling */
+}
+
+/* Wrapper principal */
+.main-wrapper {
+	height: 100vh;
+	display: flex;
+	padding: 0; /* Ensure no padding */
+}
+
+/* Lado esquerdo com gradiente */
+.left-side-gradient {
+	flex: 1;
+	background: linear-gradient(90deg, rgba(119, 130, 254, 0.81) 0%, white 85%);
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0; /* Remove padding to eliminate white space */
+	margin: 0; /* Ensure no margin around the element */
+}
+
+/* Remove redundant styles from .left-side */
+.left-side {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo {
+	width: 180px;
+}
+
+.slogan {
+	font-size: 1rem;
+}
+
+/* Lado direito (formulário) */
+.right-side {
+	flex: 1;
+	background-color: #fff;
+	padding: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Estilo dos inputs personalizados */
+.custom-input {
+	border: none;
+	border-bottom: 2px solid #6c38cc;
+	border-radius: 0;
+	font-size: 1.1rem;
+}
+
+.custom-input::placeholder {
+	color: #bbb;
+	font-style: italic;
+}
+
+.custom-input:focus {
+	box-shadow: none;
+	border-color: #6c38cc;
+}
+
+/* Ajuste de espaçamento entre os campos */
+.row.gx-2 {
+	gap: 10px; /* Espaçamento horizontal entre os campos */
+}
+
+/* Botão primário */
+.btn-primary {
+	background-color: #6c38cc;
+	border: none;
+}
+
+.btn-primary:hover {
+	background-color: #532bbd;
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+	.left-side {
+		display: none !important;
+	}
+	
+	.right-side {
+		padding: 30px 15px;
+	}
+	
+	.custom-input {
+		font-size: 1rem;
+	}
+	
+	.btn {
+		width: 100%;
+	}
+}
+
+.top-right-logo {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 10;
+}
+
+.top-right-logo img {
+	width: 50px;
+	height: auto;
+}

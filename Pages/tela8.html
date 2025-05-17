@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Documentos - LetsSign</title>
+    <link rel="stylesheet" href="../assets/css/tela8_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <aside class="left-sidebar">
+            <div class="sidebar-content">
+                <div class="recording-status">
+                    <h3>Status de gravação de voz e vídeo</h3>
+                    <p>Voz sendo gravada</p>
+                    <div class="audio-waveform">
+                        <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                        <span class="time">0:13</span>
+                    </div>
+                    <p>Vídeo sendo gravado</p>
+                    <div class="video-preview">
+                        <video id="cameraPreview" autoplay playsinline muted></video>
+                        <div class="camera-icon"></div>
+                    </div>
+                <div class="progress-section">
+                    <h3>Barra de progresso</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 0%;"></div>
+                        <span class="progress-text">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lets-sign-footer">
+                <img src="../assets/img/Logo-sign.svg" alt="LetsSign Logo">
+                <p class="contact-support">Entrar em contato com o <a href="#">suporte</a></p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="main-content-header">
+                <div class="header-logo">
+                    <img src="../assets/img/builtcode_logo_color_small 1.png" alt="BuiltCode Logo">
+                </div>
+                <div class="secure-environment-text">
+                    <p>Ambiente seguro LetSign <span class="padlock-icon">🔒</span> <span class="green-circle"></span></p>
+                </div>
+            </div>
+
+            <div class="document-container">
+                <div class="document-page">
+                    <h1 class="document-title">challenge</h1>
+
+                    <h2 class="document-heading">IDENTIFICAÇÃO DO EMPREGADO</h2>
+
+                    <p class="document-paragraph">
+                        Eu, nome: User Sobrenome, com telefone: (12) 91234-5678 e e-mail: user@builtcode.com.br. Recebi da empresa BuiltCode, CNPJ nº 12.345.678/0000-12 a título de empréstimo, para meu uso exclusivo, conforme determinado na lei, os equipamentos especificados neste termo de responsabilidade, comprometendo-me a mantê-los em perfeito estado de conservação, ficando ciente de que:
+                    </p>
+
+                    <ol class="document-list">
+                        <li>Se o equipamento for danificado ou inutilizado por emprego inadequado, mau uso, negligência ou extravio, a empresa me fornecerá novo equipamento e cobrará o valor do mesmo em folha de pagamento, a menos que um boletim de ocorrência comprove outro motivo.</li>
+                        <li>Em caso de falha ou defeito técnico, devo comunicar o departamento responsável imediatamente.</li>
+                    </ol>
+
+                    <p class="document-paragraph">
+                        Em caso de término do contrato de trabalho por qualquer motivo, a entrega dos equipamentos deverá ser realizada no mesmo dia da rescisão, estando ciente de que a falta de entrega implicará na cobrança dos mesmos e sujeitará o empregado às sanções legais cabíveis.
+                    </p>
+                    <p class="document-paragraph">
+                        Declaro ainda estar ciente de que o uso dos equipamentos é de minha total responsabilidade, devendo zelar pela sua integridade e confidencialidade das informações acessadas.
+                    </p>
+                    <p class="document-paragraph">
+                        Por estarem assim justos e contratados, as partes assinam o presente termo em duas vias de igual teor e forma, para que produza seus jurídicos e legais efeitos.
+                    </p>
+                    <p class="document-paragraph">
+                        São Paulo, 10 de maio de 2025.
+                    </p>
+                </div>
+            </div>
+            <div class="signature-button-container">
+                <button class="signature-button">Assinar Documento</button>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="../assets/js/tela8_js.js"></script>
+</body>
+</html>

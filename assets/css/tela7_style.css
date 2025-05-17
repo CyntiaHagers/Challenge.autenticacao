@@ -1,0 +1,84 @@
+body {
+	font-family: 'Segoe UI', sans-serif;
+	background-color: #f8f9fa;
+	margin: 20px; /* Adiciona espaço ao redor da tela */
+	padding: 0;
+	overflow: hidden; /* Remove a barra de rolagem */
+	position: relative; /* Necessário para posicionar o logo */
+}
+
+.instructions-container {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px; /* Espaço entre o quadro de instruções e a câmera */
+	flex: 1; /* Garante que o quadro de instruções ocupe espaço proporcional */
+}
+
+.instruction-step {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	font-size: 1rem;
+	color: #333;
+}
+
+.instruction-phrase {
+	font-size: 0.9rem;
+	font-style: italic;
+	color: #555;
+}
+
+.check-icon {
+	color: #28a745;
+	font-weight: bold;
+}
+
+.pending-icon {
+	color: #6c757d;
+	font-weight: bold;
+}
+
+.container-fluid {
+	gap: 20px; /* Espaçamento entre as colunas */
+	padding: 20px; /* Adiciona espaçamento interno */
+}
+
+.video-container {
+	position: relative;
+	background-color: #000;
+	border-radius: 10px;
+	overflow: hidden;
+	max-width: 100%; /* Limita a largura máxima */
+	max-height: 80vh; /* Limita a altura máxima */
+	margin: 0 auto; /* Centraliza horizontalmente */
+	margin-top: 20px; /* Espaço entre a câmera e o quadro de instruções */
+	flex: 2; /* Garante que a câmera ocupe mais espaço proporcional */
+}
+
+video {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.record-indicator {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 15px;
+	height: 15px;
+	background-color: red;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+.row {
+	display: flex;
+	align-items: center; /* Alinha verticalmente os elementos */
+	justify-content: center; /* Centraliza horizontalmente */
+	gap: 20px; /* Espaçamento horizontal entre as colunas */
+}

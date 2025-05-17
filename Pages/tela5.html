@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Autenticação Bancária - LetsSign</title>
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../assets/css/tela5_style.css" />
+</head>
+<body>
+	<div class="container-fluid main-wrapper d-flex flex-column flex-md-row">
+		<div class="top-right-logo">
+			<img src="../assets/img/Logo-sign.svg" alt="LetsSign" />
+		</div>
+		<div class="left-side-gradient">
+			<div class="left-side d-none d-md-flex flex-column justify-content-center align-items-center text-white">
+				<img src="../assets/img/Logo-sign.svg" alt="LetsSign" class="logo mb-2" />
+			</div>
+		</div>
+		<div class="right-side d-flex flex-column justify-content-center align-items-center w-100 p-4">
+			<form id="bank-form" class="w-100" style="max-width: 450px;">
+				<div class="mb-4">
+					<label for="codigoBanco" class="form-label fw-semibold">Insira o código do seu banco</label>
+					<input type="text" id="codigoBanco" class="form-control custom-input" placeholder="237" required />
+				</div>
+				<div class="row mb-4 gx-2">
+					<div class="col">
+						<label for="agencia" class="form-label fw-semibold">Digite a agência</label>
+						<input type="text" id="agencia" class="form-control custom-input" placeholder="1234-5" required />
+					</div>
+					<div class="col">
+						<label for="conta" class="form-label fw-semibold">Número da conta</label>
+						<input type="text" id="conta" class="form-control custom-input text-muted" placeholder="000.000.000" required />
+					</div>
+				</div>
+				<div class="mb-4">
+					<label for="cpf" class="form-label fw-semibold">Digite seu CPF</label>
+					<input type="text" id="cpf" class="form-control custom-input" placeholder="000.000.000-00" required />
+				</div>
+				<div class="text-center mt-4">
+					<button type="submit" id="prosseguir" class="btn btn-primary btn-lg px-5 rounded-pill shadow-sm fw-bold">Prosseguir</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="../assets/js/tela5_js.js"></script>
+</body>
+</html>

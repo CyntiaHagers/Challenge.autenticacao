@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Webcam - LetsSign</title>
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../assets/css/tela7_style.css">
+</head>
+<body>
+	<!-- Logo da LetsSign -->
+	<div class="position-absolute top-0 end-0 p-3">
+		<img src="..\assets\img\Logo-sign.svg" alt="LetsSign Logo" style="height: 50px;">
+	</div>
+	<div class="container-fluid vh-100 d-flex flex-column align-items-center justify-content-center">
+		<div class="row w-100">
+			<div class="col-md-4 instructions-container">
+				<div class="instruction-step">
+					<p>Aproxime seu rosto</p>
+				</div>
+				<div class="instruction-step">
+					<p>Repita a seguinte frase:</p>
+					<p class="instruction-phrase">Eu, User, de CPF numero 123.456.789-01 estou assinando o documento "Challenge".</p>
+				</div>
+				<div class="instruction-step">
+					<p>Faça um sinal de jóia com sua mão</p>
+				</div>
+				<!-- Botão de prosseguir -->
+				<div class="text-center mt-3">
+					<a href="tela8.html" class="btn btn-primary">Prosseguir</a>
+				</div>
+			</div>
+			<div class="col-md-8 video-container">
+				<video id="cameraPreview" autoplay playsinline muted></video>
+				<div class="record-indicator"></div>
+			</div>
+		</div>
+	</div>
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Custom JavaScript -->
+	<script src="../assets/js/tela7_js.js"></script>
+</body>
+</html>
